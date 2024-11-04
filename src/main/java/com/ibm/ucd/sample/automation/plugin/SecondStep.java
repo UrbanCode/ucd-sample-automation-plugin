@@ -4,6 +4,8 @@ import java.util.Properties;
 
 public class SecondStep {
 
+    private static final Properties outputProperties = new Properties();
+
     private final Medal medal;
     private final boolean isTermsAndConditionsAgreed;
 
@@ -18,6 +20,9 @@ public class SecondStep {
         try {
             Properties inputProperties = Util.readProperties(args[0]);
             new SecondStep(inputProperties).execute();
+            if (!outputProperties.isEmpty()) {
+                Util.writeProperties(args[1], outputProperties);
+            }
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
@@ -28,18 +33,16 @@ public class SecondStep {
 
     private void execute() {
         if (medal == Medal.GOLD)
-            System.out.println("Great work!");
+            outputProperties.setProperty("position", "top");
         else if (medal == Medal.SILVER)
-            System.out.println("Good job!");
+            outputProperties.setProperty("position", "middle");
         else if (medal == Medal.BRONZE)
-            System.out.println("Nice work!");
+            outputProperties.setProperty("position", "bottom");
         else
-            System.out.println("Better luck next time!");
+            outputProperties.setProperty("position", "none");
 
         if (medal != Medal.NONE && !isTermsAndConditionsAgreed)
-            throw new IllegalArgumentException("Medal winners must agree to the terms and conditions.");
-
-        System.out.println("is Terms and Conditions agreed? " + isTermsAndConditionsAgreed);
+            throw new IllegalArgumentException("Please agree to the terms and conditions.");
     }
 
     private enum Medal {

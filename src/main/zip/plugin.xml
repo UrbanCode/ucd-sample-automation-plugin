@@ -35,9 +35,9 @@
             ]]>
         </post-processing>
         <command program="${JAVA_HOME}/bin/java">
-            <arg value="-jar"/>
-            <arg file="ucd-sample-automation-plugin.jar"/>
-            <arg value="FirstStep"/>
+            <arg value="-cp"/>
+            <arg path="${PLUGIN_HOME}/*"/>
+            <arg value="com.ibm.ucd.sample.automation.plugin.FirstStep"/>
             <arg file="${PLUGIN_INPUT_PROPS}"/>
             <arg file="${PLUGIN_OUTPUT_PROPS}"/>
         </command>
@@ -73,9 +73,9 @@
             ]]>
         </post-processing>
         <command program="${JAVA_HOME}/bin/java">
-            <arg value="-jar"/>
-            <arg file="ucd-sample-automation-plugin.jar"/>
-            <arg value="SecondStep"/>
+            <arg value="-cp"/>
+            <arg path="${PLUGIN_HOME}/*"/>
+            <arg value="com.ibm.ucd.sample.automation.plugin.SecondStep"/>
             <arg file="${PLUGIN_INPUT_PROPS}"/>
             <arg file="${PLUGIN_OUTPUT_PROPS}"/>
         </command>
