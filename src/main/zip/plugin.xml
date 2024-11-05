@@ -45,7 +45,7 @@
     <step-type name="Step Two">
         <description>Second step in sample plugin</description>
         <properties>
-            <property name="medal" required="true">
+            <property name="medal" required="false">
                 <property-ui description="Example of a 'selectBox' type input"
                              default-value="NONE"
                              label="Medal"
@@ -55,7 +55,7 @@
                 <value label="Bronze">BRONZE</value>
                 <value label="None">NONE</value>
             </property>
-            <property name="agreeTermsAndConditions" required="true">
+            <property name="agreeTermsAndConditions" required="false">
                 <property-ui description="Example of a 'checkBox' type input"
                              default-value="false"
                              label="Accept terms and conditions"
