@@ -34,7 +34,7 @@
                 }
             ]]>
         </post-processing>
-        <command program="${JAVA_HOME}/bin/java">
+        <command program="${PLUGIN_HOME}/javawrapper.sh">
             <arg value="-cp"/>
             <arg path="${PLUGIN_HOME}/*"/>
             <arg value="com.ibm.ucd.sample.automation.plugin.FirstStep"/>
@@ -72,7 +72,7 @@
                 }
             ]]>
         </post-processing>
-        <command program="${JAVA_HOME}/bin/java">
+        <command program="${PLUGIN_HOME}/javawrapper.sh">
             <arg value="-cp"/>
             <arg path="${PLUGIN_HOME}/*"/>
             <arg value="com.ibm.ucd.sample.automation.plugin.SecondStep"/>

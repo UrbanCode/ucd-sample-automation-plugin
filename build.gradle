@@ -21,7 +21,6 @@ tasks.register("dist", Zip) {
     }
 
     from("src/main/zip") {
-        include("*.xml")
         filter {
             it.replace("@RELEASE_VERSION@", "$pluginVersion")
         }
