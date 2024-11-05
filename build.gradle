@@ -28,5 +28,5 @@ tasks.register("dist", Zip) {
     }
 
     destinationDirectory.set(file("build/distributions"))
-    archiveFileName = "${rootProject.name}.zip"
+    archiveFileName = "${rootProject.name}-${pluginVersion}.zip"
 }
