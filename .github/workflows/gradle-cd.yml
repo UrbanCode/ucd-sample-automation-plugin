@@ -21,7 +21,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt-openj9'
 
-      - name: Set up Git
+      - name: Set up git
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -53,10 +53,10 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
-      - name: Create dist
-        run: ./gradlew "-PpluginVersion=${{ steps.getNextTag.outputs.value }}" dist
+      - name: Create plugin zip
+        run: ./gradlew "-PpluginVersion=${{ steps.getNextTag.outputs.value }}"
 
-      - name: Create GitHub Release
+      - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.getNextTag.outputs.value }}
