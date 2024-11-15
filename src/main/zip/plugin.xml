@@ -27,7 +27,7 @@
         <post-processing>
             <![CDATA[
                 if (properties.get("exitCode") != 0) {
-                    properties.put(new java.lang.String("Status"), new java.lang.String("Failure"));
+                    properties.put("Status", "Failure");
                 }
                 else {
                     properties.put("Status", "Success");
@@ -65,7 +65,7 @@
         <post-processing>
             <![CDATA[
                 if (properties.get("exitCode") != 0) {
-                    properties.put(new java.lang.String("Status"), new java.lang.String("Failure"));
+                    properties.put("Status", "Failure");
                 }
                 else {
                     properties.put("Status", "Success");
