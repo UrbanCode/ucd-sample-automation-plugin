@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.urbancode.com/PluginXMLSchema_v1">
     <header>
-        <identifier id="com.ibm.ucd.sample.automation.plugin" name="UCD Sample Automation Plugin" version="1"/>
+        <identifier id="com.sample.automation.plugin" name="UCD Sample Automation Plugin" version="1"/>
         <description>This is a sample automation plugin for UCD</description>
         <tag>Utilities/Sample Plugin</tag>
     </header>
@@ -37,7 +37,7 @@
         <command program="${PLUGIN_HOME}/javawrapper.sh">
             <arg value="-cp"/>
             <arg path="${PLUGIN_HOME}/*"/>
-            <arg value="com.ibm.ucd.sample.automation.plugin.FirstStep"/>
+            <arg value="com.sample.automation.plugin.FirstStep"/>
             <arg file="${PLUGIN_INPUT_PROPS}"/>
             <arg file="${PLUGIN_OUTPUT_PROPS}"/>
         </command>
@@ -75,7 +75,7 @@
         <command program="${PLUGIN_HOME}/javawrapper.sh">
             <arg value="-cp"/>
             <arg path="${PLUGIN_HOME}/*"/>
-            <arg value="com.ibm.ucd.sample.automation.plugin.SecondStep"/>
+            <arg value="com.sample.automation.plugin.SecondStep"/>
             <arg file="${PLUGIN_INPUT_PROPS}"/>
             <arg file="${PLUGIN_OUTPUT_PROPS}"/>
         </command>

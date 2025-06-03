@@ -1,4 +1,4 @@
-package com.ibm.ucd.sample.automation.plugin;
+package com.sample.automation.plugin;
 
 import java.util.Properties;
 
